@@ -1,0 +1,345 @@
+body {
+  background: $body-color;
+}
+
+.section-title {
+  margin-bottom: 65px;
+  @include tablet {
+    margin-bottom: 40px;
+  }
+  h2 {
+    line-height: 60px;
+    margin-bottom: 5px;
+    @include tablet {
+      font-size: 35px;
+      text-align: center;
+    }
+    @include mobile {
+      font-size: 30px;
+      line-height: 45px;
+    }
+  }
+  p {
+    width: 70%;
+    margin: 0 auto;
+    @include tablet {
+      width: 100%;
+    }
+  }
+  &-white {
+    h2,
+    p {
+      color: $white;
+    }
+  }
+}
+
+.form-control {
+  height: 55px;
+  padding: 15px 25px;
+  border-color: transparent;
+  background-color: $light-gray;
+  border-radius: 0 10px 10px;
+  &:focus {
+    box-shadow: none;
+    outline: 0;
+    border-color: $instant-likes;
+  }
+}
+
+.form-group {
+  label {
+    font-weight: 500;
+    color: $text-color;
+    line-height: 34px;
+    margin-bottom: 10px;
+  }
+  margin-bottom: 20px;
+}
+
+select.form-control {
+  height: 42px !important;
+  position: relative;
+}
+
+.select-wrapper {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 10px;
+    background: url("../images/angle-down-select.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-80%);
+  }
+}
+
+textarea.form-control {
+  height: auto;
+}
+
+.get-views {
+  padding-bottom: 90px;
+  @include mobile {
+    padding-bottom: 60px;
+  }
+  &-form {
+    background-color: $white;
+    padding: 30px 30px 50px;
+    margin-top: -280px;
+    position: relative;
+    z-index: 2;
+    border-radius: 0 40px 40px 40px;
+    @include tablet {
+      border-radius: 0 20px 20px 20px;
+    }
+    .form-check {
+      label {
+        font-weight: 500;
+        color: $text-color;
+        margin-left: 5px;
+        @include mobile {
+          font-size: 14px;
+        }
+      }
+      margin-bottom: 45px;
+    }
+    .form-footer {
+      text-align: right;
+      button {
+        margin-left: auto;
+        @include mobile {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.privacy-policy,
+.tems-conditions {
+  margin-bottom: 90px;
+  &-hader {
+    background-color: $instant-followers;
+    padding: 160px 200px 130px;
+    margin-bottom: 50px;
+    position: relative;
+    border-radius: 0 0 40px 40px;
+    z-index: 1;
+    overflow: hidden;
+    @include desktop {
+      padding: 160px 100px 130px;
+    }
+    @include tablet {
+      padding: 150px 0;
+    }
+    @include mobile {
+      padding: 120px 0;
+    }
+    h1 {
+      color: $white;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 50px;
+      @include tablet {
+        font-size: 30px;
+        text-align: center;
+      }
+      @include mobile-xs {
+        font-size: 22px;
+      }
+    }
+    .privacy-policy-shape-leftBottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      transform: translate(-20%, 20px);
+      svg {
+        width: 219px;
+        @include tablet {
+          width: 180px;
+        }
+        @include mobile {
+          width: 140px;
+        }
+      }
+    }
+    .privacy-policy-shape-rightBottom {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+      transform: translate(15%, 40px);
+      svg {
+        width: 351px;
+        @include tablet {
+          width: 280px;
+        }
+        @include mobile {
+          width: 220px;
+        }
+      }
+    }
+  }
+  &-content {
+    padding: 50px;
+    background-color: $white;
+    border-radius: 0px 20px 20px 20px;
+    @include desktop {
+      padding: 30px;
+    }
+  }
+  &-item {
+    margin-bottom: 40px;
+    h2 {
+      margin-bottom: 10px;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 26px;
+    }
+    p {
+      margin-bottom: 20px;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 26px;
+      color: $text-color;
+    }
+  }
+}
+.tems-conditions {
+  &-header {
+    background-color: $instant-followers;
+    padding: 160px 200px 130px;
+    margin-bottom: 50px;
+    border-radius: 0 0 40px 40px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    @include desktop {
+      padding: 160px 100px 130px;
+    }
+    @include tablet {
+      padding: 150px 0;
+    }
+    @include mobile {
+      padding: 120px 0;
+    }
+    h1 {
+      color: $white;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 50px;
+      @include tablet {
+        font-size: 30px;
+        text-align: center;
+      }
+      @include mobile-xs {
+        font-size: 22px;
+      }
+    }
+    .tems-conditions-shape-leftBottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      transform: translate(0%, 20%);
+      svg {
+        width: 1213px;
+      }
+    }
+    .tems-conditions-shape-rightBottom {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+      transform: translate(15%, 40px);
+      svg {
+        width: 338px;
+        @include tablet {
+          width: 260px;
+        }
+      }
+    }
+  }
+
+  &-content {
+    padding: 48px 130px 50px 50px;
+  }
+}
+
+@keyframes up-down-animation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes up-down-rev-animation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes up-down2-animation {
+  0% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes left-right-animation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
+}
+
+@keyframes right-left-animation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(20px);
+  }
+}
+
+@keyframes scale-animation {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate-animation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes opacity-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

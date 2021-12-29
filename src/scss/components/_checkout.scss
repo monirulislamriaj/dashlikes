@@ -1,0 +1,339 @@
+.checkout,
+.checkout-two {
+  margin-bottom: 60px;
+  &-header {
+    position: relative;
+    background-color: $automatic-followers;
+    padding: 140px 0 380px;
+    margin-bottom: 100px;
+    overflow: hidden;
+    border-radius: 0 0 40px 40px;
+    h1 {
+      color: $white;
+      @include desktop {
+        text-align: center;
+      }
+    }
+    .checkout-header-shape-wrapper {
+      top: 0;
+      border-radius: 0 0 40px 40px;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      .checkout-header-shape-leftCenter {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-35%, -50%);
+      }
+      .checkout-header-shape-rightBottom {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        transform: translate(50%, 20%);
+      }
+    }
+  }
+
+  &-upsell {
+    background-color: $instant-likes;
+    padding: 45px 50px 40px;
+    margin-bottom: 30px;
+    position: relative;
+    border-radius: 0px 20px 20px 20px;
+    overflow: hidden;
+    h2 {
+      font-size: 20px;
+      line-height: 33px;
+      color: $white;
+      font-weight: normal;
+      margin-bottom: 20px;
+      @include mobile {
+        font-size: 14px;
+      }
+      span {
+        display: block;
+        font-weight: 500;
+      }
+    }
+    &-dismiss {
+      width: 18px;
+      height: 18px;
+      display: block;
+      position: absolute;
+      top: 30px;
+      right: 48px;
+      cursor: pointer;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.6);
+      }
+      &::before {
+        transform: rotate(-45deg);
+      }
+      &::after {
+        transform: rotate(45deg);
+      }
+    }
+    &-shape-topCenter {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(-20%, -10%);
+      @include tablet {
+        transform: translate(-30%, -18%);
+      }
+      svg {
+        width: 217px;
+        height: auto;
+        @include tablet {
+          width: 180px;
+        }
+        @include mobile {
+          width: 130px;
+        }
+      }
+    }
+    &-shape-rightCenter {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(35%, 0%);
+      @include tablet {
+        transform: translate(51%, 0%);
+      }
+      @include mobile {
+        transform: translate(51%, 30%);
+      }
+
+      svg {
+        width: 217px;
+        height: auto;
+        @include tablet {
+          width: 180px;
+        }
+        @include tablet {
+          width: 130px;
+        }
+      }
+    }
+  }
+  &-widget {
+    background-color: $white;
+    border-radius: 0px 20px 20px 20px;
+    &-form {
+      padding: 30px;
+      a.btn {
+        @include desktop {
+          margin: 0 auto;
+          display: block;
+        }
+      }
+    }
+    &-package {
+      width: 50%;
+      padding: 30px;
+      background: #8e65ff;
+      border-radius: 0px 10px 10px 10px;
+      position: relative;
+      margin: 10px 0 35px;
+      display: inline-block;
+      @include desktop-lg {
+        width: 100%;
+      }
+      label {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: $white;
+        margin-left: 0;
+        @include mobile {
+          font-size: 14px;
+        }
+        @include mobile-xs {
+          font-size: 10px;
+        }
+      }
+    }
+    &-submesion {
+      .form-check {
+        margin-bottom: 5px;
+        label {
+          font-size: 16px;
+          line-height: 22px;
+          color: $black;
+          font-weight: 500;
+        }
+      }
+      p {
+        font-size: 15px;
+        line-height: 22px;
+        color: $text-color;
+        margin-bottom: 30px;
+        padding-right: 80px;
+        @include mobile {
+          padding-right: 0;
+        }
+        @include mobile-xs {
+          font-size: 12px;
+        }
+      }
+    }
+    a {
+      width: 50%;
+    }
+  }
+
+  &-package {
+    padding: 45px 30px;
+    background-color: $automatic-likes;
+    border-radius: 0px 20px 20px 20px;
+    margin-bottom: 30px;
+    h2 {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 33px;
+      color: $white;
+      text-align: center;
+      margin-bottom: 10px;
+      span {
+        font-size: 30px;
+        font-weight: 600;
+        @include mobile {
+          font-size: 22px;
+        }
+      }
+    }
+    p {
+      font-size: 15px;
+      line-height: 22px;
+      color: $white;
+      text-align: center;
+      margin-bottom: 0;
+      @include desktop {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &-guarantee {
+    background-color: $white;
+    border-radius: 0px 20px 20px 20px;
+    padding: 100px 40px 70px;
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+    @include desktop {
+      padding: 50px 40px;
+    }
+    &-shape-leftTop {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(-20%, -20%);
+      svg {
+        width: 217px;
+        height: auto;
+      }
+    }
+    .svg-icon {
+      width: 130px;
+      height: 159px;
+      margin: 0 auto 30px;
+    }
+    h2 {
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 33px;
+      text-align: center;
+      @include desktop-lg {
+        font-size: 24px;
+      }
+      @include tablet {
+        font-size: 25px;
+      }
+      @include mobile {
+        font-size: 20px;
+      }
+      @include mobile-xs {
+        font-size: 14px;
+      }
+    }
+    p {
+      font-size: 15px;
+      line-height: 22px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+  &-review {
+    background-color: $white;
+    padding: 60px 135px 30px;
+    border-radius: 0px 20px 20px 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .review-icon {
+      margin-bottom: 40px;
+      img {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        margin-bottom: 5px;
+      }
+      h3 {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 34px;
+        margin-bottom: 0;
+      }
+      a {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 34px;
+        color: $black;
+      }
+    }
+    .review-details {
+      p {
+        margin-bottom: 30px;
+        a {
+          color: $instant-followers;
+          display: block;
+        }
+      }
+      a {
+      }
+    }
+  }
+  &-views {
+    margin-top: -465px;
+    display: flex;
+    align-items: center;
+    @include desktop {
+      margin-bottom: 50px;
+      display: block;
+    }
+  }
+  &-left {
+    margin-top: -465px;
+    @include desktop {
+      margin-bottom: 50px;
+    }
+  }
+  &-right {
+    margin-top: -465px;
+    @include desktop {
+      margin-top: 0;
+    }
+  }
+}

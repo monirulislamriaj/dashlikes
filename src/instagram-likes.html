@@ -1,0 +1,25 @@
+@@include('header.htm') 
+
+@@include('components/navigation.htm', 
+  { "color": "likes" }
+) 
+
+@@include('components/hero-like.htm')
+
+@@include('components/pricing-likes.htm') 
+
+@@include('components/feature.htm')
+
+@@include('components/review.htm', {
+  "page" : "likes"
+}) 
+
+@@include('components/faq.htm')
+
+@@include('components/cta.htm') 
+
+@@include('components/footer.htm',{
+  "page": "likes"
+})
+
+@@include('footer.htm')

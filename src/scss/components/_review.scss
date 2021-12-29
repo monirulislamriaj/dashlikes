@@ -1,0 +1,198 @@
+.review {
+  padding: 100px 0;
+  background-color: $hero-dark-purple;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 40px 40px;
+  z-index: 1;
+  @include tablet {
+    padding: 50px 0;
+  }
+  &.likes {
+    background-color: $automatic-followers;
+  }
+  &.followers {
+    background-color: $automatic-followers;
+  }
+  &.views {
+    background-color: $instant-followers;
+  }
+  &-shape {
+    &-leftCenter {
+      position: absolute;
+      width: 400px;
+      height: auto;
+      top: 50%;
+      left: 0;
+      transform: translate(-14px, -50%);
+      @include tablet {
+        width: 250px;
+      }
+      svg {
+        width: 100%;
+        path {
+          &:nth-child(1) {
+            animation-name: up-down-rev-animation;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+          }
+          &:nth-child(2) {
+            animation-name: up-down-animation;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+          }
+          &:nth-child(3) {
+            animation-name: opacity-animation;
+            animation-duration: 3.5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+          }
+          &:nth-child(5) {
+            animation-name: right-left-animation;
+            animation-duration: 3.5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+          }
+          &:nth-child(6) {
+            animation-name: left-right-animation;
+            animation-duration: 3.5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+          }
+        }
+      }
+    }
+    &-leftBottom {
+      position: absolute;
+      width: 230px;
+      left: 20%;
+      bottom: 0;
+      transform: translateY(70px);
+      @include tablet {
+        width: 150px;
+        transform: translateY(30px);
+      }
+      svg {
+        width: 100%;
+        animation-name: up-down-animation;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+    }
+    &-rightBottom {
+      position: absolute;
+      width: 415px;
+      right: 0;
+      bottom: 0;
+      transform: translate(50px, 60px);
+      z-index: -1;
+      @include desktop-lg {
+        width: 300px;
+      }
+      @include tablet {
+        width: 200px;
+      }
+      svg {
+        width: 100%;
+        path {
+          &:nth-child(1) {
+            animation-name: right-left-animation;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+          }
+          &:nth-child(2) {
+            animation-name: left-right-animation;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+          }
+          &:nth-child(3) {
+            animation-name: opacity-animation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+          }
+          &:nth-child(5) {
+            animation-name: up-down-animation;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+          }
+          &:nth-child(6) {
+            animation-name: up-down2-animation;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+          }
+          &:nth-child(7) {
+            animation-name: opacity-animation;
+            animation-duration: 2.5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+          }
+          &:nth-child(8) {
+            animation-name: opacity-animation;
+            animation-duration: 3.5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+          }
+        }
+      }
+    }
+  }
+  &-slider {
+    margin: 0 -30px;
+    &-item {
+      border-radius: 0 20px 20px;
+      margin: 40px 30px;
+      outline: 0;
+      transition: 0.3s ease;
+      .name {
+        margin-bottom: 0;
+        padding: 30px 0;
+        color: $white;
+      }
+      .ratings {
+        background: $white;
+        width: 100%;
+        padding: 28px 0;
+        border-radius: 0 20px 20px;
+        img {
+          margin: 0 auto;
+        }
+      }
+    }
+    .slick-current + .slick-active {
+      transform: scale(1.15);
+    }
+    .slick-dots {
+      bottom: -30px;
+      li {
+        width: unset;
+        height: unset;
+        button {
+          width: 10px;
+          height: 2px;
+          border-radius: 2px;
+          background-color: $white;
+          padding: 0;
+          opacity: 0.16;
+          transition: 0.3s ease;
+          &::before {
+            content: none;
+          }
+        }
+        &.slick-active {
+          button {
+            width: 64px;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

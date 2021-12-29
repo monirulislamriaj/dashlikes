@@ -1,0 +1,132 @@
+.main-navigation {
+  padding: 16px 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  @include desktop-lg {
+    padding: 15px 10px;
+  }
+  @include desktop {
+    padding: 15px 30px;
+    background: $hero-dark-purple;
+  }
+  .navbar-brand {
+    padding: 0;
+    margin: 0;
+    img {
+      max-width: 100%;
+      @include mobile {
+        max-width: 120px;
+      }
+    }
+  }
+  .nav-item {
+    @include desktop {
+      text-align: center;
+    }
+    .nav-link {
+      font-size: 14px;
+      color: $white;
+      transition: all 0.3s ease;
+      padding: 15px;
+      position: relative;
+      @include desktop-lg {
+        font-size: 12px;
+        padding: 15px 10px;
+      }
+      @include desktop {
+        font-size: 14px;
+      }
+    }
+  }
+  .navbar-toggler {
+    outline: 0;
+    padding: 0;
+    .icon-bar {
+      height: 2px;
+      width: 25px;
+      transition: all 0.2s;
+      background: $primary-color;
+      display: block;
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+      &:nth-child(1) {
+        transform: rotate(45deg);
+        transform-origin: 10% 10%;
+      }
+      &:nth-child(2) {
+        opacity: 0;
+        filter: alpha(opacity=0);
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+        transform-origin: 10% 90%;
+      }
+    }
+    &.collapsed {
+      .icon-bar {
+        &:nth-child(1) {
+          transform: rotate(0);
+        }
+        &:nth-child(2) {
+          opacity: 1;
+          filter: alpha(opacity=1);
+        }
+        &:nth-child(3) {
+          transform: rotate(0);
+        }
+      }
+    }
+  }
+  &.nav-bg {
+    background: $hero-dark-purple;
+    padding: 15px;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.09);
+    @include mobile {
+      padding: 15px;
+    }
+    &.likes {
+      background: $automatic-followers;
+    }
+    &.followers {
+      background: $automatic-followers;
+    }
+    &.views {
+      background: $instant-followers;
+    }
+    &.views2 {
+      background: $instant-likes;
+    }
+    &.contact {
+      background: $instant-likes;
+    }
+  }
+  &.likes {
+    @include desktop {
+      background: $automatic-followers;
+    }
+  }
+  &.followers {
+    @include desktop {
+      background: $automatic-followers;
+    }
+  }
+  &.views {
+    @include desktop {
+      background: $instant-followers;
+    }
+  }
+  &.views2 {
+    @include desktop {
+      background: $instant-likes;
+    }
+  }
+  &.contact {
+    @include desktop {
+      background: $instant-likes;
+    }
+  }
+}

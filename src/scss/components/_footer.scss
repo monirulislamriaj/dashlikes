@@ -1,0 +1,166 @@
+.footer {
+  padding: 80px 0 25px;
+  background: $hero-dark-purple;
+  border-radius: 40px 40px 0 0;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  @include tablet {
+    padding: 60px 0 30px;
+  }
+  &.likes {
+    background: $automatic-followers;
+  }
+  &.followers {
+    background: $automatic-followers;
+  }
+  &.views {
+    background: $instant-followers;
+    .footer-shape-rightBottom {
+      svg {
+        path {
+          &:first-child {
+            fill: #43d3b8;
+          }
+        }
+      }
+    }
+    .footer-shape-leftCenter {
+      svg {
+        path {
+          &:nth-child(3) {
+            fill: #43d3b8;
+          }
+        }
+      }
+    }
+  }
+  &.views2 {
+    background: $instant-likes;
+  }
+  &.contact {
+    background: $instant-likes;
+  }
+  &-widget {
+    &-link {
+      margin-bottom: 70px;
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+          margin-bottom: 0;
+          a {
+            display: block;
+            color: $white;
+            padding: 8px 0;
+          }
+        }
+      }
+      @include tablet {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+    }
+    &-payment {
+      p {
+        color: $white;
+      }
+      img {
+        max-width: 100%;
+      }
+      @include tablet {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  &-copyright {
+    margin-bottom: 0;
+    color: $white;
+  }
+  &-shape {
+    &-leftCenter {
+      position: absolute;
+      width: 131px;
+      height: auto;
+      left: 2%;
+      top: 50%;
+      transform: translateY(-50%);
+      svg {
+        width: 100%;
+        path {
+          &:nth-child(1),
+          &:nth-child(2) {
+            animation-name: right-left-animation;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+          }
+          &:nth-child(3) {
+            animation-name: up-down-animation;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+          }
+          &:nth-child(4) {
+            animation-name: opacity-animation;
+            animation-duration: 3.5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+          }
+        }
+      }
+    }
+    &-leftTop {
+      position: absolute;
+      width: 143px;
+      height: auto;
+      top: 0;
+      left: 15%;
+      svg {
+        width: 100%;
+      }
+    }
+    &-rightBottom {
+      position: absolute;
+      width: 228px;
+      height: auto;
+      right: 0;
+      bottom: 0;
+      transform: translate(30px, 50px);
+      @include tablet {
+        z-index: -1;
+      }
+      @include mobile {
+        width: 180px;
+      }
+      @include mobile-xs {
+        width: 120px;
+      }
+      svg {
+        width: 100%;
+        path {
+          &:nth-child(1) {
+            animation-name: opacity-animation;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+          }
+          &:nth-child(2) {
+            animation-name: up-down-rev-animation;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+          }
+          &:nth-child(3) {
+            animation-name: right-left-animation;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+          }
+        }
+      }
+    }
+  }
+}

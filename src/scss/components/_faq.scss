@@ -1,0 +1,33 @@
+.faq {
+  padding: 90px 0 0;
+  @include desktop {
+    padding: 50px 0 0;
+  }
+  &-item {
+    margin-bottom: 20px;
+  }
+  &-title {
+    background-color: $automatic-followers;
+    border-radius: 0 15px 0px 0px;
+    padding: 22px 20px 40px;
+    display: flex;
+    align-items: center;
+    h2 {
+      font-size: 20px;
+      line-height: 30px;
+      color: $white;
+      margin-bottom: 0;
+    }
+  }
+  &-content {
+    padding: 20px 30px;
+    border-radius: 0 30px 15px 15px;
+    margin-top: -25px;
+    background-color: $white;
+  }
+  &.views {
+    .faq-title {
+      background-color: $instant-followers;
+    }
+  }
+}

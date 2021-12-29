@@ -1,0 +1,564 @@
+.blog-post {
+  margin-bottom: 30px;
+  &-header {
+    padding: 30px 50px;
+    background-color: $white;
+    border-radius: 0 20px 20px 20px;
+    position: relative;
+    z-index: 1;
+    @include mobile-xs {
+      padding: 30px 20px;
+      text-align: center;
+    }
+    .post-tag {
+      background-color: $instant-followers;
+      color: $white;
+      border-radius: 6px;
+      padding: 5px 20px;
+      display: inline-block;
+    }
+    .post-title {
+      a {
+        color: $text-color;
+        text-decoration: none;
+        font-size: 40px;
+        list-style: 50px;
+        display: block;
+        @include desktop {
+          font-size: 30px;
+        }
+        @include tablet {
+          font-size: 22px;
+          line-height: 30px;
+        }
+        @include mobile {
+          font-size: 20px;
+          line-height: 30px;
+        }
+        @include mobile-xs {
+          font-size: 18px;
+        }
+      }
+    }
+    .post-meta {
+      font-size: 14px;
+      color: $text-color;
+    }
+    &:hover {
+      .post-title {
+        a {
+          color: $instant-followers;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+  &-body {
+    padding: 50px 50px 30px;
+    background-color: $instant-followers;
+    border-radius: 0 0px 20px 20px;
+    position: relative;
+    margin-top: -35px;
+    @include mobile-xs {
+      padding: 55px 30px 30px;
+      text-align: center;
+    }
+    p {
+      color: $white;
+      margin-bottom: 25px;
+    }
+    a.btn {
+      @include tablet {
+        width: 100%;
+      }
+    }
+  }
+  &.alternate {
+    .blog-post-header {
+      padding: 30px 40px;
+      @include mobile-xs {
+        padding: 30px;
+      }
+      .post-title {
+        a {
+          font-size: 24px;
+          display: block;
+          line-height: 34px;
+          @include desktop-lg {
+            font-size: 22px;
+          }
+          @include tablet {
+            font-size: 20px;
+          }
+          @include mobile {
+            font-size: 18px;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+    .blog-post-body {
+      background-color: $automatic-followers;
+    }
+  }
+  &.alternate-two {
+    .blog-post-header {
+      padding: 30px 40px;
+      @include mobile-xs {
+        padding: 30px;
+      }
+      .post-title {
+        a {
+          font-size: 24px;
+          display: block;
+          line-height: 34px;
+          @include desktop-lg {
+            font-size: 22px;
+          }
+          @include tablet {
+            font-size: 20px;
+          }
+          @include mobile {
+            font-size: 18px;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+    .blog-post-body {
+      background-color: $instant-followers;
+    }
+  }
+
+  &-content {
+    background-color: $white;
+    padding: 30px 50px;
+    border-radius: 0px 20px 20px 20px;
+    z-index: 1;
+    position: relative;
+    &-tag {
+      background-color: $instant-followers;
+      width: 15%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      a {
+        padding: 10px;
+        color: $white;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+      }
+    }
+    &-title {
+      padding-bottom: 10px;
+      a {
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 50px;
+        color: $black;
+        letter-spacing: 1px;
+        display: block;
+        text-decoration: none;
+      }
+    }
+    &-meta {
+      a {
+        font-size: 14px;
+        line-height: 30px;
+        display: block;
+        color: $black;
+        text-decoration: none;
+      }
+    }
+    &:hover {
+      .blog-post-content-tag {
+        background-color: $hero-dark-purple;
+        transition: all.3s ease-in-out;
+        a {
+          color: $white;
+          transition: all.3s ease-in-out;
+        }
+      }
+      .blog-post-content-title {
+        a {
+          color: $instant-followers;
+          transition: all.3s ease-in-out;
+        }
+      }
+      .blog-post-content-meta {
+        a {
+          color: $instant-followers;
+          transition: all.3s ease-in-out;
+        }
+      }
+    }
+  }
+  &-description {
+    padding: 40px 50px 30px;
+    border-radius: 0 0 20px 20px;
+    background-color: $instant-followers;
+    margin-top: -20px;
+    position: relative;
+
+    p {
+      color: $white;
+      margin-bottom: 20px;
+    }
+  }
+  #single-first-post,
+  #single-secend-post {
+    .blog-post-content {
+      &-title {
+        a {
+          font-size: 20px;
+          line-height: 34px;
+        }
+      }
+    }
+    .blog-post-description {
+      background-color: $automatic-followers;
+    }
+  }
+  #single-secend-post {
+    .blog-post-description {
+      background-color: $instant-followers;
+    }
+  }
+}
+// start single-blog-page
+.blog-single-header {
+  background-color: $instant-followers;
+  background-image: url(../images/hero/blog-single.png);
+  background-position: right;
+  background-size: contain;
+  padding: 150px 0;
+  background-repeat: no-repeat;
+  margin-bottom: 50px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  @include tablet {
+    padding: 120px 0;
+  }
+  &-shape-leftBottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translate(-20%, 25%);
+    svg {
+      width: 219px;
+      path {
+        &:nth-child(1) {
+          animation-name: opacity-animation;
+          animation-duration: 3s;
+          animation-delay: -1s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+        }
+        &:nth-child(2) {
+          animation-name: right-left-animation;
+          animation-duration: 2.5s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+        }
+        &:nth-child(3) {
+          animation-name: opacity-animation;
+          animation-duration: 3.5s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+        }
+
+        &:nth-child(4) {
+          animation-name: left-right-animation;
+          animation-duration: 3s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+        }
+        &:nth-child(5) {
+          animation-name: up-down-animation;
+          animation-duration: 3s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+        }
+      }
+      @include mobile {
+        width: 160px;
+      }
+    }
+  }
+  &-shape-rightBottom {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translate(15%, 20%);
+    svg {
+      width: 351px;
+      path {
+        &:nth-child(1) {
+          animation-name: left-right-animation;
+          animation-duration: 2.5s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+        }
+        &:nth-child(2) {
+          animation-name: opacity-animation;
+          animation-duration: 3.5s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+        }
+        &:nth-child(3) {
+          animation-name: opacity-animation;
+          animation-duration: 3s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+        }
+
+        &:nth-child(4),
+        &:nth-child(5) {
+          animation-name: up-down-animation;
+          animation-duration: 3.5s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+          animation-delay: -1s;
+        }
+        &:nth-child(6) {
+          animation-name: opacity-animation;
+          animation-duration: 3s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+        }
+        &:nth-child(7) {
+          animation-name: up-down2-animation;
+          animation-duration: 2.5s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+        }
+      }
+      @include desktop-lg {
+        width: 270px;
+      }
+      @include mobile {
+        width: 200px;
+      }
+    }
+  }
+  h1 {
+    color: $white;
+    font-size: 40px;
+    line-height: 50px;
+    @include desktop {
+      font-size: 30px;
+      text-align: center;
+    }
+    @include tablet {
+      font-size: 25px;
+    }
+    @include mobile {
+      font-size: 20px;
+      line-height: 40px;
+    }
+    @include mobile {
+      font-size: 16px;
+      line-height: 30px;
+    }
+  }
+}
+// start blog-deteals
+.blog-single {
+  .blog-post-single {
+    padding: 33px 50px;
+    background-color: $white;
+    h3 {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 26px;
+      margin-bottom: 30px;
+    }
+    ul {
+      margin: 0 0 40px;
+      padding: 0;
+      li {
+        list-style: none;
+        font-size: 16px;
+        line-height: 34px;
+        margin-bottom: 5px;
+        position: relative;
+        font-weight: 600;
+        color: $black;
+        @include tablet {
+          font-size: 12px;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          background-color: $instant-followers;
+          border-radius: 50px;
+          top: 0;
+          left: 0;
+          transform: translate(-20px, 11px);
+        }
+      }
+    }
+    p {
+      font-size: 16px;
+      line-height: 26px;
+      display: block;
+      margin-bottom: 20px;
+      @include tablet {
+        font-size: 14px;
+      }
+      a {
+        color: $instant-followers;
+        text-decoration: underline;
+      }
+    }
+    .media-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 60px 0;
+      @include desktop {
+        display: block;
+      }
+      .media {
+        width: 48%;
+        @include desktop {
+          width: 100%;
+          margin-bottom: 30px;
+        }
+        img {
+          max-width: 100%;
+        }
+      }
+      .content {
+        width: 48%;
+        @include desktop {
+          width: 100%;
+        }
+        h4 {
+          font-weight: 600;
+          font-size: 19px;
+          line-height: 33px;
+          margin-bottom: 20px;
+          @include desktop-lg {
+            font-size: 16px;
+            line-height: 30px;
+          }
+          @include mobile {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    h4 {
+      font-weight: 600;
+      font-size: 19px;
+      line-height: 33px;
+      margin-bottom: 20px;
+      @include tablet {
+        font-size: 16px;
+      }
+      @include mobile-xs {
+        font-size: 14px;
+        line-height: 25px;
+      }
+    }
+  }
+
+  &-content {
+    background-color: $white;
+    margin-top: 30px;
+    padding: 20px 40px;
+    border-radius: 0px 20px 20px 20px;
+    article {
+      .blog-title {
+        span {
+          font-size: 20px;
+          font-weight: 600;
+        }
+      }
+      .blog-list {
+        ul {
+          padding: 0;
+          margin-bottom: 40px;
+          li {
+            list-style: none;
+          }
+        }
+      }
+      p {
+        margin-bottom: 30px;
+        a {
+          color: $instant-followers;
+          text-decoration: underline;
+        }
+      }
+      h3 {
+        font-size: 19px;
+        margin-bottom: 20px;
+      }
+    }
+    .thamnile {
+      padding-top: 50px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 50px;
+      .blog-thum {
+        width: 50%;
+        img {
+          max-width: 100%;
+        }
+      }
+      .blog-content {
+        width: 48%;
+        h3 {
+          font-size: 19px;
+          margin-bottom: 20px;
+          line-height: 35px;
+        }
+        p {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}
+// start samelar-post
+.similar-post {
+  padding: 100px 0;
+  position: relative;
+  z-index: 1;
+  .similar-post-shape-leftTop {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transform: translate(0px, 145px);
+    svg {
+      width: 175px;
+      height: auto;
+      @include desktop-lg {
+        width: 120px;
+      }
+    }
+  }
+  .similar-post-shape-rightBottom {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transform: translate(-20px, -65px);
+    @include desktop-lg {
+      transform: translate(0px, -80px);
+    }
+    svg {
+      width: 160px;
+      height: auto;
+      @include desktop-lg {
+        width: 120px;
+      }
+    }
+  }
+}

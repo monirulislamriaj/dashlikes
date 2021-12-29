@@ -1,0 +1,150 @@
+.service {
+  padding: 50px 0 100px;
+  @include mobile-xs {
+    overflow: hidden;
+  }
+  &.instant-views {
+    padding-bottom: 200px;
+    @include desktop {
+      padding-bottom: 80px;
+    }
+  }
+  &-image {
+    padding-top: 100px;
+    border-radius: 0 20px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    @include desktop {
+      width: 70%;
+      margin: 0 auto 100px;
+    }
+    @include tablet {
+      width: 90%;
+    }
+    @include mobile-xs {
+      width: 100%;
+    }
+    &.af {
+      background: $automatic-followers;
+      .service-image-bg {
+        width: 100%;
+        transform: translate(39px, -40px);
+      }
+    }
+    &.if {
+      background: $instant-followers;
+      .service-image-bg {
+        width: 90%;
+        transform: translate(5%, -80px);
+      }
+    }
+    &.al {
+      background: $automatic-likes;
+      .service-image-bg {
+        width: 90%;
+        transform: translate(5%, -80px);
+      }
+    }
+    &.il {
+      background: $instant-likes;
+      .service-image-bg {
+        width: 90%;
+        transform: translate(5%, -80px);
+      }
+    }
+    &.iv {
+      background: $instant-views;
+      .service-image-bg {
+        width: 90%;
+        transform: translate(5%, -120px);
+      }
+    }
+    &-bg {
+      z-index: -1;
+      position: absolute;
+      left: 0;
+      top: 0;
+      svg {
+        width: 100%;
+      }
+    }
+    &-card {
+      position: absolute;
+      bottom: 10%;
+      left: 27px;
+      z-index: 1;
+      height: auto;
+      animation-name: left-right-animation;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      @include mobile-xs {
+        left: 0;
+      }
+      img {
+        border-radius: 4px;
+        box-shadow: 0px 20px 30px rgba(25, 26, 48, 0.162232);
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 90%;
+        background: rgba($color: white, $alpha: 0.5);
+        border-radius: 4px;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 88px);
+        z-index: -1;
+      }
+    }
+    &-icon {
+      position: absolute;
+      top: 10%;
+      right: 15%;
+      animation-name: up-down2-animation;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      @include mobile-xs {
+        right: 0;
+      }
+      img {
+        border-radius: 50%;
+        box-shadow: 0px 42px 54px rgba(0, 0, 0, 0.32);
+      }
+    }
+    img {
+      margin-bottom: -100px;
+    }
+  }
+  &-content {
+    @include desktop {
+      text-align: center;
+    }
+    &.right {
+      margin-left: 65px;
+      @include desktop {
+        margin-left: 0;
+      }
+    }
+    &.left {
+      margin-right: 65px;
+      @include desktop {
+        margin-right: 0;
+      }
+    }
+    h2 {
+      font-size: 35px;
+      line-height: 52px;
+      margin-bottom: 6px;
+      @include tablet {
+        font-size: 30px;
+      }
+    }
+    p {
+      margin-bottom: 40px;
+    }
+  }
+}
